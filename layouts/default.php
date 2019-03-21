@@ -4,7 +4,7 @@
  * 
  *
  *
- * @package WordPress Starter Kit
+ * @package Black Box Cakery
  * @version 1.0
  */
 

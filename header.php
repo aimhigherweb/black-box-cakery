@@ -3,7 +3,7 @@
  * The header template
  *
  *
- * @package WordPress Starter Kit
+ * @package Black Box Cakery
  * @version 1.0
  */
 ?>
@@ -13,18 +13,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-        <link href="/wp-content/themes/wordpress/style.css" rel="stylesheet" />
+        <link href="/wp-content/themes/blackboxcakery/style.css" rel="stylesheet" />
         
-        <title>WordPress Template</title>
-        <meta name="description" content="WordPress Template" />
+        <title>Black Box Cakery</title>
+        <meta name="description" content="Black Box Cakery" />
 
-        <meta property="og:title" content="WordPress Template" />
+        <meta property="og:title" content="Black Box Cakery" />
         <meta property="og:image" content="" />
-        <meta property="og:description" content="WordPress Template" />
+        <meta property="og:description" content="Black Box Cakery" />
 
-        <meta name="twitter:title" content="WordPress Template" />
-        <meta name="twitter:description" content="WordPress Template" />
-        <meta name="twitter:image" content="WordPress Template" />
+        <meta name="twitter:title" content="Black Box Cakery" />
+        <meta name="twitter:description" content="Black Box Cakery" />
+        <meta name="twitter:image" content="" />
 
         <?php wp_head(); ?>
     </head>

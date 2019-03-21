@@ -1,1 +1,1 @@
-# WordPress Base Template
+# Black Box Cakery Custom WordPress Template

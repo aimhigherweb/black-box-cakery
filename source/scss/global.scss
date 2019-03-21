@@ -34,35 +34,35 @@ h1, h2, h3, h4, h5 {
   
 
 h1 {
-    color: $primary_dark_50;
+    color: $primary_light_50;
     font-size: 2.5em;
     text-transform: uppercase;
 }
 
 h2 {
-    color: $primary_dark_50;
+    color: $primary_light_50;
     font-size: 2em;
 }
 
 h3 {
-    color: $primary_dark_75;
+    color: $primary_light_75;
     font-size: 1.8em;
 }
 
 h4 {
-    color: $primary_dark_25;
+    color: $primary_light_25;
     font-size: 1.3em;
     margin-bottom: 0.5em;
 }
 
 h5 {
-    color: $primary_dark_25;
+    color: $primary_light_25;
     font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
 a {
-    color: $primary_dark_90;
+    color: $primary_light_90;
     text-decoration-skip-ink: auto;
 
     &:active, &:hover, &:focus {
@@ -73,7 +73,7 @@ a {
 blockquote {
     border: none;
         border-right: 4px solid $secondary;
-    color: $primary_dark_75;
+    color: $primary_light_75;
     padding: 10px 10px 10px 5px;
     text-align: right;
 }
@@ -107,7 +107,7 @@ img, svg {
 figcaption {
     border: none;
         border-left: 3px solid $secondary;
-    color: $primary_dark_90;
+    color: $primary_light_90;
     padding: 5px 5px 5px 10px;
     text-align: left;
 }
@@ -156,22 +156,22 @@ form {
     input {
         background: $primary_light_10;
         border: 1px solid $primary_light_75;
-        color: $primary_dark_25; 
+        color: $primary_light_25; 
         display: block;
         margin: 10px 0;
         padding: 5px 10px;
         width: 100%;
 
         &::placeholder {
-            color: $primary_dark_25; 
+            color: $primary_light_25; 
         }
     }
 }
 
 button, .btn {
     background: none;
-    border: 2px solid $primary_dark_50;
-    color: $primary_dark_50;
+    border: 2px solid $primary_light_50;
+    color: $primary_light_50;
     cursor: pointer;
     display: block;
     font-weight: 700;
@@ -181,7 +181,7 @@ button, .btn {
     text-transform: uppercase;
 
         &:active, &:hover, &:focus {
-            background: $primary_dark_50;
+            background: $primary_light_50;
             color: #fff;
         }
 }

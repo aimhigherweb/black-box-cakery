@@ -1,20 +1,21 @@
 {
-  "name": "wordpress",
-  "version": "2.0.0",
+  "name": "black-box-cakery",
+  "version": "1.0.0",
   "description": "Custom WordPress Template",
   "repository": {
     "type": "git",
-    "url": "git@github.com:AimHigher-Web-Design/wordpress.git"
+    "url": "git@github.com:AimHigher-Web-Design/black-box-cakery.git"
   },
   "scripts": {
     "start": "gulp sassy && gulp watch",
-    "build": "gulp sassy && gulp styleVersion"
+    "build": "gulp sassy && gulp styleVersion",
+    "compile": "gulp sassy"
   },
   "author": "AimHigher Web Design",
   "bugs": {
-    "url": "https://github.com/AimHigher-Web-Design/wordpress/issues"
+    "url": "https://github.com/AimHigher-Web-Design/black-box-cakery/issues"
   },
-  "homepage": "https://github.com/AimHigher-Web-Design/wordpress#readme",
+  "homepage": "https://github.com/AimHigher-Web-Design/black-box-cakery#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-replace": "^1.0.0",

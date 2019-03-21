@@ -9,9 +9,9 @@ var replace = require('gulp-replace');
 //File Paths
 var sassFiles = 'source/scss/**/*.scss',
     mainSassFile = 'source/scss/style.scss',
-    cssFiles = '',
+    cssFiles = '.',
     sourceMaps = '/source/maps',
-    styleSheet = '/wp-content/themes/wordpress/style.css';
+    styleSheet = '/wp-content/themes/blackboxcakery/style.css';
     currentDate = new Date().toISOString();
 
 //Compile main sass into css

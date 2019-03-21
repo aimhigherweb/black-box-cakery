@@ -3,14 +3,14 @@
  * The main template file
  *
  *
- * @package WordPress Starter Kit
+ * @package Black Box Cakery
  * @version 1.0
  */
 
 get_header(); ?>
 
 <div class="container">
-    <h2>AimHigher WordPress Base Template</h2>
+    <h2>Black Box Cakery</h2>
 </div>
 
 <?php get_footer();

@@ -49,7 +49,7 @@ body {
 
         li {           
             a {
-                color: $primary_dark_50;
+                color: $primary_light_50;
                 display: block;
                 font: $font_headings;
                 font-size: 1.5em;
@@ -57,7 +57,7 @@ body {
                 text-decoration: none;
 
                 &:active, &:hover, &:focus {
-                    background: $primary_dark_50;
+                    background: $primary_light_50;
                     color: #fff;
                 }
             }
@@ -98,7 +98,7 @@ body {
         
 
         .hamburger {
-            background: $primary_dark_50;
+            background: $primary_light_50;
             
             span {
                 color: #fff;
@@ -123,10 +123,10 @@ body {
 
             ul {
                 li {
-                    border-top: 2px solid $primary_dark_50;
+                    border-top: 2px solid $primary_light_50;
                     
                     &:last-child {
-                        border-bottom: 2px solid $primary_dark_50;
+                        border-bottom: 2px solid $primary_light_50;
                     }
                 }
             }
