@@ -15,25 +15,29 @@ var sassFiles = 'source/scss/**/*.scss',
     currentDate = new Date().toISOString();
 
 //Compile main sass into css
-gulp.task('sassy', function(){
-  gulp.src(mainSassFile)
-    .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError)) //Using gulp-sass
+function sassy() {
+  return gulp.src(mainSassFile)
+  .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError)) //Using gulp-sass
 
-    .pipe(sourcemaps.write('/source/maps'))
-      .pipe(gulp.dest(cssFiles))
-});
+  .pipe(sourcemaps.write('/source/maps'))
+    .pipe(gulp.dest(cssFiles))
+}
 
 
 //Watch for changes in sass files and running sass compile
-gulp.task('watch', function() {
-  gulp.watch(sassFiles, ['sassy']);
-});
+function watch() {
+  gulp.watch(sassFiles, sassy);
+}
 
-gulp.task('styleVersion', function() {
+function styleVersion() {
   var thisVersion = styleSheet + '?v=' + currentDate;
 
-  gulp.src(['header.php'])
+  return gulp.src(['header.php'])
     .pipe(replace(styleSheet, thisVersion))
     .pipe(gulp.dest('./'))
-});
+}
+
+exports.sassy = sassy;
+exports.watch = watch;
+exports.styleVersion = styleVersion;
