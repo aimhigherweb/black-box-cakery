@@ -13,6 +13,19 @@
     function my_widget_title($t) {
         return null;
     }
+
+    //Upload logo to customise area
+    function custom_logo_setup() {
+        $defaults = array(
+            'height'      => 50,
+            'width'       => 120,
+            'flex-height' => true,
+            'flex-width'  => true,
+        );
+        add_theme_support( 'custom-logo', $defaults );
+    }
+    add_action( 'after_setup_theme', 'custom_logo_setup' );
+
     
 
     //Allow using SVGs

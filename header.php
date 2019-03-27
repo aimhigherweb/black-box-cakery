@@ -31,7 +31,6 @@
 
 <body id="root" class="<?php if(is_front_page()) {echo 'home';}; ?>">
     <header>
-        <div class="wrap">
             <div class="site-logo">
                 <a href="/">
                     <?php
@@ -50,7 +49,14 @@
                     )); 
                 ?>
             </div>
-        </div>
+
+            <?php wp_nav_menu(array(
+                'theme_location' => 'social_menu',
+                'container' => 'nav',
+                'container_class' => 'menu social icons'
+                )); 
+			?>
+
     </header>
 
     <div class="wrap">

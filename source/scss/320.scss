@@ -1,10 +1,10 @@
 header {   
-    @include transp-background();
-    height: $height_header;
-    width: 100vw;
+    background: $neutral_light_10;
     padding: 10px 20px;
     position: fixed;
         top: 0;
+        bottom: 0;
+        left: 0;
     z-index: 50;
 
     .wrap {
@@ -22,21 +22,6 @@ header {
 
         img, svg {
             max-height: 100%;
-        }
-    }
-}
-
-body {
-    &.home {
-        header {
-            background: transparent;
-        }
-
-        &.scrolled {
-            header {
-                @include transp-background();
-                background: linear-gradient(rgba(255, 255, 255, 0.8), transparent);
-            }
         }
     }
 }
