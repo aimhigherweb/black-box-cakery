@@ -44,6 +44,7 @@ function watch() {
 		"./*.php",
 		"./layouts/**/*.php",
 		"./parts/**/*.php",
+		"./woocommerce/**/*.php",
 		"./source/scss/**/*.scss"
 	]).on("change", reload)
 }

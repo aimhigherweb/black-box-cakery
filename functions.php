@@ -1,5 +1,6 @@
 <?php
     require_once(__DIR__ . '/functions/acf.php');
+    require_once(__DIR__ . '/functions/woocommerce.php');
 
     // Define Nav Menus
     register_nav_menus(array (
@@ -82,4 +83,12 @@
             </style>';
     }
     add_action( 'admin_head', 'fix_svg' );
+
+    //Stop Inlining width and height for images
+    add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
+    add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+    function remove_thumbnail_dimensions( $html ) { 
+        $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); 
+        return $html;
+    }
 ?>

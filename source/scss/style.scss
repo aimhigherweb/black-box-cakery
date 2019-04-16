@@ -23,6 +23,10 @@ Version: 2.0.0
     @import '768.scss';
 }
 
-@media (min-width: 75rem) { // ~ 1344px
+@media (min-width: 1000px) {
+    @import '1000.scss';
+}
+
+@media (min-width: 80rem) { // ~ 1344px
     @import '1200.scss';
 }

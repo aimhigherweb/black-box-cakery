@@ -1,0 +1,36 @@
+header {   
+    padding: 25px;
+    width: 20vw;
+        bottom: 0;
+
+    .site-logo {
+        height: 200px;
+        order: 1;
+        position: static;
+        width: 100%;
+    }
+}
+
+nav {
+    overflow-x: visible;
+
+    &.main {
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            &:nth-child(n+5) {
+                order: 2;
+            }
+        }
+
+        a {
+            font-size: 1.2em;
+        }
+    }
+
+    &.social {
+        display: block;
+    }
+}

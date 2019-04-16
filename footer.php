@@ -12,6 +12,12 @@
 		</div><!-- #content -->
 
 		<footer>			
+			<?php wp_nav_menu(array(
+				'theme_location' => 'social_menu',
+				'container' => 'nav',
+				'container_class' => 'menu social icons'
+				)); 
+			?>
 			<div class="aimhigher logo">
 				<a href="https://aimhigherweb.design" target="_blank" rel="nofollow">
 					<?php 
