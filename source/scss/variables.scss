@@ -41,42 +41,48 @@ $neutral: #aaaaaa;
     font-family: 'Droid Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('./source/fonts/black-box-cakery-DroidSans.ttf') format('truetype');
+    font-display: swap;
+    src: url('./source/fonts/DroidSans.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Droid Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('./source/fonts/black-box-cakery-DroidSans-Bold.ttf') format('truetype');
+    font-display: swap;
+    src: url('./source/fonts/DroidSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Cabin';
     font-style: normal;
     font-weight: 400;
-    src: url('./source/fonts/black-box-cakery-Cabin-Regular.ttf') format('truetype');
+    font-display: swap;
+    src: url('./source/fonts/Cabin-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Cabin';
     font-style: italic;
     font-weight: 400;
-    src: url('./source/fonts/black-box-cakery-Cabin-Italic.ttf') format('truetype');
+    font-display: swap;
+    src: url('./source/fonts/Cabin-Italic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Cabin';
     font-style: normal;
     font-weight: 700;
-    src: url('./source/fonts/black-box-cakery-Cabin-Bold.ttf') format('truetype');
+    font-display: swap;
+    src: url('./source/fonts/Cabin-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Cabin';
     font-style: italic;
     font-weight: 700;
-    src: url('./source/fonts/black-box-cakery-Cabin-BoldItalic.ttf') format('truetype');
+    font-display: swap;
+    src: url('./source/fonts/Cabin-BoldItalic.ttf') format('truetype');
 }
 
 $font_regular: 400 1em 'Droid Sans', Arial, sans-serif;
@@ -93,3 +99,42 @@ $width_inner: 75rem;
     background: #fff;
     background: rgba(#fff, 0.7);
 };
+
+%button {
+    background: none;
+    border: 2px solid $primary_light_50;
+    color: $primary_light_50;
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+        &:active, &:hover, &:focus {
+            background: $primary_light_50;
+            color: #fff;
+        }
+}
+
+%button-hover {
+    background: $primary_light_50;
+    color: #fff;
+}
+
+%input {
+    background: #fff;
+    border: 1px solid $primary_light_90;
+    color: $primary_light_90;
+    padding: 10px;
+
+    &:focus {
+        border-color: $secondary_dark_75;
+    }
+}
+
+%select {
+    @extend %input;
+    border-radius: 0;
+}

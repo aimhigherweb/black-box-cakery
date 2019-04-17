@@ -50,6 +50,26 @@ body {
 .content {
     margin-left: 20vw;
     padding: 50px;
+    min-height: 90vh;
+
+    h1 {
+        text-align: right;
+    }
+}
+
+.container {
+    font-size: 18px;
+    padding-right: 60px;
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+}
+
+.woocommerce-notices-wrapper {
+    width: 40vw;
+    margin-left: auto;
 }
 
 .featured-image {
@@ -68,6 +88,20 @@ body {
 }
 
 footer {
+    background: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    padding: 10px;
     width: 80vw;
     margin: auto 0 0 auto;
+
+    .social {
+        display: none;
+    }
+
+    .aimhigher {
+        width: 200px;
+    }
 }
