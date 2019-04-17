@@ -46,3 +46,28 @@ body {
         }
     }
 }
+
+.content {
+    margin-left: 20vw;
+    padding: 50px;
+}
+
+.featured-image {
+    position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        overflow: hidden;
+
+    blockquote {
+        max-width: 60vw;
+        padding: 1em 2em;
+        font-size: 2.5em;
+    }
+}
+
+footer {
+    width: 80vw;
+    margin: auto 0 0 auto;
+}
