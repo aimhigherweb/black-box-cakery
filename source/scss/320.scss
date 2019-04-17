@@ -6,9 +6,6 @@ header {
     padding: 10px;
     min-width: 200px;
     padding-top: 100px;
-    position: fixed;
-        top: 0;
-        left: 0;
     width: 100vw;
     z-index: 50;
 
@@ -130,10 +127,6 @@ body {
     &.home {
         .content {
             margin-top: 0;
-        }
-
-        footer {
-            display: none;
         }
     }
 }
@@ -357,6 +350,7 @@ footer {
     background: blue;
     width: 80vw;
     margin: auto 0 0 auto;
+
     .aimhigher {
         svg {
             .cls-1, .cls-2 {

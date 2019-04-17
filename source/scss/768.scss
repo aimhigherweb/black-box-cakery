@@ -1,10 +1,14 @@
 header {   
     padding: 25px;
-    width: 20vw;
+    position: fixed;
+        top: 0;
         bottom: 0;
+        left: 0;
+    width: 20vw;
 
     .site-logo {
         height: 200px;
+        max-height: 20vh;
         order: 1;
         position: static;
         width: 100%;
@@ -32,5 +36,13 @@ nav {
 
     &.social {
         display: block;
+    }
+}
+
+body {
+    &.home {
+        footer {
+            display: none;
+        }
     }
 }
