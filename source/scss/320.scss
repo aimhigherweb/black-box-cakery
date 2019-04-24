@@ -410,11 +410,15 @@ body {
                     }
                 }
             }
-        }
 
-        .wcpa_form_outer {
-            input[type="text"], textarea {
-                width: 300px;
+            &:not(.flavour):not(.theme) {
+                input[type="radio"]:checked {
+                    & + label {
+                        .wcpa_check:before {
+                            background: $secondary;
+                        }
+                    }
+                }
             }
         }
 
@@ -424,16 +428,20 @@ body {
             margin-bottom: 10px;
         }
 
-        input {
+        input, textarea, select {
+            background: #fff;
             color: $primary_light_90;
+            width: 90%;
+                max-width: 400px;
 
             &[type="text"], &[type="number"] {
-                background: #fff;
-                width: 300px;
-
                 &:focus {
                     border-color: $secondary_dark_75;
                 }
+            }
+
+            &:focus {
+                border-color: $secondary_dark_75;
             }
         }
 
