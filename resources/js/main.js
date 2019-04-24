@@ -21,6 +21,8 @@ window.onload = function() {
         flavour.addEventListener('change', function(e) {
             let thisFlavour = e.target.value;
 
+            console.log(thisFlavour)
+
             if(document.querySelectorAll('.product .woocommerce-product-details__short-description .description.flavour div.visible').length > 0) {
                 document.querySelectorAll('.product .woocommerce-product-details__short-description .description.flavour div.visible').forEach(desc => {
                     desc.classList.remove('visible');
@@ -34,17 +36,19 @@ window.onload = function() {
             })
 
             //Is a bit clunky, might remove it
-            // document.querySelectorAll('.product .woocommerce-product-gallery .woocommerce-product-gallery__image').forEach(img => {
+            if(document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image .flavour-preview')) {
+                document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image .flavour-preview').remove()
+            }
 
-            //     if(img.querySelector('img[data-caption]').dataset.caption == thisFlavour) {
-            //         let newImage = document.createElement('img')
-            //         newImage.src = img.querySelector('img').src.replace('-100x100.jpg', '.jpg')
-            //         document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image a').replaceChild(
-            //             newImage,
-            //             document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image img')
-            //         )
-            //     }
-            // })
+            document.querySelectorAll('.product .woocommerce-product-gallery .woocommerce-product-gallery__image').forEach(img => {
+
+                if(img.querySelector('img[data-caption]').dataset.caption == thisFlavour) {
+                    let newImage = document.createElement('img')
+                    newImage.src = img.querySelector('img').src.replace('-100x100.jpg', '.jpg')
+                    newImage.classList.add('flavour-preview')
+                    document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image').prepend(newImage)
+                }
+            })
         })
     })
 }

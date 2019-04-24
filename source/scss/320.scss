@@ -278,10 +278,30 @@ body {
 
             *:first-child {
                 width: 100%;
+
+                &.woocommerce-product-gallery__image {
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                a {
+                    cursor: auto;
+                    pointer-events: none;
+                }
             }
 
             img {
                 max-width: 40vw;
+
+                &.flavour-preview {
+                    height: 100%;
+                    width: auto;
+                    margin-left: -50%;
+                    object-fit: cover;
+                    object-position: center;
+                    position: absolute;
+                        left: 50%;
+                }
             }
 
             @supports(grid-template-areas: '.') {
@@ -393,7 +413,7 @@ body {
         }
 
         .wcpa_form_outer {
-            input[type="text"] {
+            input[type="text"], textarea {
                 width: 300px;
             }
         }
@@ -498,6 +518,10 @@ body {
             }
         }
     }
+}
+
+.pswp__caption {
+    display: none;
 }
 
 .woocommerce-cart-form, .woocommerce-checkout {
