@@ -4,3 +4,23 @@
         font-size: 3em;
     }
 }
+
+figure {
+    margin-left: -40px;
+}
+
+.product {
+    padding: 0;
+
+    .price, .woocommerce-product-details__short-description {
+        width: 30vw;
+    }
+
+    .woocommerce-product-gallery {
+        width: 40vw;
+    }
+
+    figure {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,11 @@
+.product {
+    .price, .woocommerce-product-details__short-description {
+        position: absolute;
+        width: 40vw;
+    }
+
+    .woocommerce-product-gallery {
+        margin-left: auto;
+        width: 50vw;
+    }
+}

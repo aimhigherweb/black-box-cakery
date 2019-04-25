@@ -72,6 +72,18 @@ body {
     margin-left: auto;
 }
 
+.product {
+    padding: 0 0 0 10px;
+
+    .price, .woocommerce-product-details__short-description {
+        width: 30vw;
+    }
+
+    .woocommerce-product-gallery {
+        width: 35vw;
+    }
+}
+
 .featured-image {
     position: absolute;
         top: 0;
@@ -79,6 +91,11 @@ body {
         right: 0;
         height: 100vh;
         overflow: hidden;
+
+    img {
+        min-width: 80vw;
+        min-height: 100vh;
+    }
 
     blockquote {
         max-width: 60vw;
