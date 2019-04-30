@@ -37,9 +37,10 @@ window.onload = function() {
 
             //Is a bit clunky, might remove it
             if(document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image .flavour-preview')) {
-                document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image .flavour-preview').remove()
+                document.querySelectorAll('.product .woocommerce-product-gallery .woocommerce-product-gallery__image .flavour-preview').forEach(img => {
+					img.remove()
+				})
             }
-
             document.querySelectorAll('.product .woocommerce-product-gallery .woocommerce-product-gallery__image').forEach(img => {
 
                 if(img.querySelector('img[data-caption]').dataset.caption == thisFlavour) {
