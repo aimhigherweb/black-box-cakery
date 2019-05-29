@@ -45,7 +45,7 @@ window.onload = function() {
 
                 if(img.querySelector('img[data-caption]').dataset.caption == thisFlavour) {
                     let newImage = document.createElement('img')
-                    newImage.src = img.querySelector('img').src.replace('-100x100.jpg', '.jpg')
+                    newImage.src = img.querySelector('img').parentElement.href
                     newImage.classList.add('flavour-preview')
                     document.querySelector('.product .woocommerce-product-gallery .woocommerce-product-gallery__image').prepend(newImage)
                 }
