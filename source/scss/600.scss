@@ -9,3 +9,37 @@
         width: 50vw;
     }
 }
+
+@supports(grid-template-areas: '.') {
+    .product {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 20px;
+    grid-template-areas: 
+        'price  gallery'
+        'desc   gallery'
+        'form   form';
+
+        .price, .woocommerce-product-details__short-description {
+            position: static;
+            width: auto;
+        }
+
+        .price {
+            grid-area: price;
+        }
+
+        .woocommerce-product-details__short-description {
+            grid-area: desc;
+        }
+
+        .woocommerce-product-gallery {
+            grid-area: gallery;
+        }
+
+        .cart {
+            grid-area: form;
+        }
+    }
+}
