@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/AimHigher-Web-Design/black-box-cakery#readme",
   "devDependencies": {
-    "@prettier/plugin-php": "^0.10.2",
+    "@prettier/plugin-php": "^0.14.0",
     "gulp": "^4.0.0",
-    "gulp-prettier": "^2.1.0",
+    "gulp-prettier": "^3.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "prettier": "^1.16.4"
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "browser-sync": "^2.26.3"
