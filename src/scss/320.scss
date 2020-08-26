@@ -28,6 +28,12 @@ header {
 
     .social {
         display: none;
+
+        a {
+            &:active, &:hover, &:focus {
+                background: none;
+            }
+        }
     }
 }
 
@@ -791,15 +797,21 @@ footer {
         }
 
         a {
+            background: none;
+
             &:active, &:hover, &:focus {
                 svg {
-                    .cls-1 {
-                        fill: #1c75bc;
-                    }
+                    .cls-n {
+						fill: #36454f;
+					}
 
-                    .cls-2 {
-                        fill: #16a6b1;
-                    }
+					.cls-s {
+						fill: #00acbb;
+					}
+
+					.cls-g {
+						fill: url(#AimHigherGradient);
+					}
                 }
             }
         }

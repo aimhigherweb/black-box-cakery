@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    color: $neutral_dark_25;
-    font: $font_regular;
 }
 
 body {
+    color: $neutral_dark_25;
+    font-family: $font_regular;
     margin: 0;
     position: absolute;
         top: 0;
@@ -28,7 +28,8 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font: $font_headings;
+    font-family: $font_headings;
+    font-weight: 700;
     text-align: left;
 }
   

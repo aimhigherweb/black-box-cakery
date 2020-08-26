@@ -2,30 +2,29 @@
   "name": "black-box-cakery",
   "version": "1.0.0",
   "description": "Custom WordPress Template",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:AimHigher-Web-Design/black-box-cakery.git"
+    "url": "git@github.com:aimhigherweb/black-box-cakery.git"
   },
   "scripts": {
-    "start": "gulp sassy && gulp watch",
-    "build": "gulp sassy && gulp styleVersion",
-    "compile": "gulp sassy"
+    "start": "npm run sass && npm run dev",
+    "dev": "gulp watch",
+    "build": "npm run sass && gulp styleVersion",
+    "sass": "gulp sassy"
   },
-  "author": "AimHigher Web Design",
-  "bugs": {
-    "url": "https://github.com/AimHigher-Web-Design/black-box-cakery/issues"
-  },
-  "homepage": "https://github.com/AimHigher-Web-Design/black-box-cakery#readme",
+  "author": "AimHigher Web Design <amy@aimhigherweb.design> (https://aimhigherweb.design)",
   "devDependencies": {
-    "@prettier/plugin-php": "^0.14.0",
+    "@prettier/plugin-php": "^0.14.3",
     "gulp": "^4.0.0",
     "gulp-prettier": "^3.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "prettier": "^2.0.5"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.12",
+    "dotenv": "^8.2.0",
+    "gulp-dart-sass": "^1.0.2"
   }
 }

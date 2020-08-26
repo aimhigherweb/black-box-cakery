@@ -42,7 +42,7 @@ $neutral: #aaaaaa;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('./source/fonts/DroidSans.ttf') format('truetype');
+    src: url('./src/fonts/DroidSans.ttf') format('truetype');
 }
 
 @font-face {
@@ -50,7 +50,7 @@ $neutral: #aaaaaa;
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('./source/fonts/DroidSans-Bold.ttf') format('truetype');
+    src: url('./src/fonts/DroidSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -58,7 +58,7 @@ $neutral: #aaaaaa;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('./source/fonts/Cabin-Regular.ttf') format('truetype');
+    src: url('./src/fonts/Cabin-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -66,7 +66,7 @@ $neutral: #aaaaaa;
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('./source/fonts/Cabin-Italic.ttf') format('truetype');
+    src: url('./src/fonts/Cabin-Italic.ttf') format('truetype');
 }
 
 @font-face {
@@ -74,7 +74,7 @@ $neutral: #aaaaaa;
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('./source/fonts/Cabin-Bold.ttf') format('truetype');
+    src: url('./src/fonts/Cabin-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -82,12 +82,11 @@ $neutral: #aaaaaa;
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: url('./source/fonts/Cabin-BoldItalic.ttf') format('truetype');
+    src: url('./src/fonts/Cabin-BoldItalic.ttf') format('truetype');
 }
 
-$font_regular: 400 1em 'Droid Sans', Arial, sans-serif;
-$font_bold: 700 1em 'Droid Sans', Arial, sans-serif;
-$font_headings: 700 1.5em 'Cabin', Arial, sans-serif;
+$font_regular: 'Droid Sans', Arial, sans-serif;
+$font_headings: 'Cabin', Arial, sans-serif;
 
 
 // Variables
