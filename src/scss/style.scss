@@ -30,3 +30,9 @@ Version: 2.0.0
 @media (min-width: 80rem) { // ~ 1344px
     @import '1200.scss';
 }
+
+@import './partials/content.scss';
+
+@import './blocks/order-form.scss';
+
+@import 'wordpress.scss';

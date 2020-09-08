@@ -1,0 +1,9 @@
+.container {
+	&.full {
+		max-width: unset;
+
+		h1 {
+			text-align: right;
+		}
+	}
+}

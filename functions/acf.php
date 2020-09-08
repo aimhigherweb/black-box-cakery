@@ -134,6 +134,64 @@ if( function_exists('acf_add_local_field_group') ):
 		'active' => true,
 		'description' => '',
 	));
+
+	// Custom Page Attributes
+	acf_add_local_field_group(array(
+		'key' => 'group_5f5075a51455a',
+		'title' => 'Page Attributes',
+		'fields' => array(
+			array(
+				'key' => 'field_5f5075b5da549',
+				'label' => 'Width',
+				'name' => 'width',
+				'type' => 'select',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'standard' => 'Standard',
+					'full' => 'Full Width',
+					'left' => 'Left Aligned',
+				),
+				'default_value' => 'standard',
+				'allow_null' => 0,
+				'multiple' => 0,
+				'ui' => 0,
+				'return_format' => 'value',
+				'ajax' => 0,
+				'placeholder' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_template',
+					'operator' => '==',
+					'value' => 'default',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_template',
+					'operator' => '==',
+					'value' => 'layouts/default.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'side',
+		'style' => 'seamless',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
 	
 endif;
 

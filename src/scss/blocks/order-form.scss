@@ -1,0 +1,209 @@
+.order-form {
+	text-align: left;
+
+	.gallery {
+		float: right;
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+		max-width: 600px;
+
+		img {
+			cursor: pointer;
+			display: block;
+			width: 150px;
+
+			&:first-child {
+				cursor: auto;
+				width: 100%;
+			}
+		}
+	}
+
+	.description {
+		width: 50%;
+	}
+
+	.product-price {
+		font-size: 1.6em;
+
+		span {
+			margin-right: 10px;
+		}
+	}
+}
+
+form {
+	&.cake-order, &.cart {
+		clear: both;
+		max-width: 100%;
+
+		button {
+			
+			margin-left: 0;
+
+			&[type="submit"] {
+				font-size: 1.5em;
+			}
+		}
+
+		legend, label, dt {
+			display: inline-block;
+			font-size: 1.3em;
+			margin: 20px 0 10px;
+		}
+	
+		fieldset {
+			border: none;
+			padding: 20px 0 0;
+	
+			> div:not(.block) {
+				display: flex;
+				flex-wrap: wrap;
+	
+				legend {
+					width: 100%;
+				}
+			}
+
+			legend {
+				margin-top: 0;
+			}
+	
+			input[type="radio"] {
+				display: none;
+	
+				+ label {
+					$radio_size: 18px;
+					$radio_gap: 4px;
+	
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					font-size: 1em;
+					position: relative;
+					margin: 0 20px 0 0;
+	
+					&:before, &:after {
+						border-radius: 50%;
+					}
+	
+					&:before {
+						content: '';
+						background: #fff;
+						border: 2px solid $neutral;
+						height: $radio_size;
+						width: $radio_size;
+						margin-right: 20px;
+					}
+	
+					&:after {
+						background: $secondary;
+						height: $radio_size - $radio_gap;
+						width: $radio_size - $radio_gap;
+						position: absolute;
+						left: $radio_gap;
+					}
+	
+					small {
+						align-self: center;
+						margin-left: 10px;
+						font-size: 0.8em;
+					}
+				}
+	
+				&:checked {
+					+ label {
+						&:after {
+							content: '';
+						}
+					}
+				}
+			}
+	
+			&[class^="pa_"] {
+				input[type="radio"] {
+					+ label {
+						border: 2px solid $neutral_dark_50;
+						background-size: cover;
+						justify-content: center;
+						padding: 10px 5px;
+						width: 100px;
+						height: 100px;
+						
+						&:before {
+							background: rgba(255, 255, 255, 0.9);
+							border-radius: 0;
+							border: none;
+							height: auto;
+							width: auto;
+							margin: 0;
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+						}
+						
+						span {
+							text-align: center;
+							position: absolute;
+							font-size: 0.8em;
+						}
+	
+						&:before, span {
+							opacity: 0;
+						}
+	
+						&:hover, &:focus {
+							&:before, span {
+								opacity: 1;
+							}
+						}
+					}
+	
+					&:checked {
+						+ label {
+							border-color: $secondary;
+	
+							&:after {
+								content: normal;
+							}
+	
+							&:before, span {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+	
+			&.hidden {
+				display: none;
+			}
+		}
+	
+		input[type="text"], textarea {
+			font-size: 1.1em;
+			padding: 5px;
+			max-width: 400px;
+		}
+
+		.filled {
+			pointer-events: none;
+			filter: grayscale(100%);
+
+			input, textarea {
+				
+			}
+		}
+
+		input, textarea {
+			&.filled {
+				background: $neutral_light_25;
+			}
+		}
+
+		
+	}
+}
