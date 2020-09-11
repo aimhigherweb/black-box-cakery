@@ -1,9 +1,18 @@
 .container {
 	&.full {
-		max-width: unset;
-
+		max-width: 1300px;
+		margin-left: 0;
+		
 		h1 {
 			text-align: right;
+		}
+	}
+}
+
+@media(min-width: 48rem) {
+	.container {
+		&.full {
+			padding-right: 20px;
 		}
 	}
 }

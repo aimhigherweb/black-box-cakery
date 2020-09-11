@@ -19,7 +19,7 @@
         })(window,document,'script','dataLayer','GTM-TXS44DP');</script>
         <!-- End Google Tag Manager -->
 
-        <link href="/wp-content/themes/blackboxcakery/style.css" rel="stylesheet" />
+        <link href="/wp-content/themes/blackboxcakery/style.css?2020sep11" rel="stylesheet" />
         
         <title>Black Box Cakery</title>
         <meta name="description" content="Black Box Cakery" />

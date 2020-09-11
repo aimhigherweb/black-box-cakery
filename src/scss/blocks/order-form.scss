@@ -2,16 +2,16 @@
 	text-align: left;
 
 	.gallery {
-		float: right;
 		display: flex;
 		flex-wrap: wrap;
-		width: 50%;
 		max-width: 600px;
+		align-items: flex-start;
 
 		img {
 			cursor: pointer;
 			display: block;
-			width: 150px;
+			width: 100px;
+			height: auto;
 
 			&:first-child {
 				cursor: auto;
@@ -21,7 +21,10 @@
 	}
 
 	.description {
-		width: 50%;
+		h2 {
+			display: inline-block;
+			font-size: 1.2em;
+		}
 	}
 
 	.product-price {
@@ -39,11 +42,17 @@ form {
 		max-width: 100%;
 
 		button {
-			
 			margin-left: 0;
 
 			&[type="submit"] {
 				font-size: 1.5em;
+				border-color: $secondary;
+				color: $primary_light_90;
+
+				&:active, &:hover, &:focus {
+					background: $secondary;
+					color: $primary;
+				}
 			}
 		}
 
@@ -51,6 +60,16 @@ form {
 			display: inline-block;
 			font-size: 1.3em;
 			margin: 20px 0 10px;
+		}
+
+		legend, label {
+			&[required] {
+				&:after {
+					content: '*';
+					color: #DC143C;
+					margin-left: 10px;
+				}
+			}
 		}
 	
 		fieldset {
@@ -127,6 +146,7 @@ form {
 						border: 2px solid $neutral_dark_50;
 						background-size: cover;
 						justify-content: center;
+						margin: 0 20px 20px 0;
 						padding: 10px 5px;
 						width: 100px;
 						height: 100px;
@@ -183,10 +203,14 @@ form {
 			}
 		}
 	
-		input[type="text"], textarea {
+		input[type="text"], input[type="number"], textarea, select {
 			font-size: 1.1em;
 			padding: 5px;
 			max-width: 400px;
+
+			&:focus {
+				border-color: $secondary_dark_75;
+			}
 		}
 
 		.filled {
@@ -203,7 +227,82 @@ form {
 				background: $neutral_light_25;
 			}
 		}
-
 		
+	}
+}
+
+@supports(grid-template-areas: '.') {
+	.order-form {
+		display: grid;
+		grid-template-areas: 'gallery' 'd_main' 'd_flavour' 'd_dec' 'form';
+
+		.gallery {
+			grid-area: gallery;
+		}
+
+		.description {
+			&.main {
+				grid-area: d_main;
+			}
+
+			&.pa_flavours {
+				grid-area: d_flavour;
+			}
+
+			&.pa_decorations {
+				grid-area: d_dec;
+			}
+		}
+
+		form {
+			grid-area: form;
+		}
+	}
+}
+
+@media(min-width: 45em) {
+	.order-form {
+		.gallery {
+			float: right;
+			width: 48%;
+		}
+
+		img:not(:first-child) {
+			width: 50%;
+			max-width: 150px;
+		}
+	
+		.description {
+			width: 50%;
+		}
+	}
+
+	@supports(grid-template-areas: '.') {
+		.order-form {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 20px;
+			grid-template-areas: 'd_main gallery' 'd_flavour gallery' 'd_dec gallery' 'form form';
+			grid-template-rows: auto auto 1fr auto;
+
+
+			.gallery {
+				float: none;
+				margin-right: 0;
+				width: 100%;
+			}
+
+			.description {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 60rem) {
+	@supports(grid-template-areas: '.') {
+		.order-form {
+			grid-template-columns: 1fr 600px;
+		}
 	}
 }

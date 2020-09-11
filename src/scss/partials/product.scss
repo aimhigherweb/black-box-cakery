@@ -1,0 +1,194 @@
+.product {
+    padding: 10px;
+    width: 100%;
+
+    .woocommerce-Price-amount {
+        border: 4px solid $secondary;
+        color: $primary;
+        font-size: 2em;
+        padding: 10px 15px;
+
+        .woocommerce-Price-currencySymbol {
+            font-size: 0.7em;
+        }
+    }
+
+    .gallery {
+		display: flex;
+		flex-wrap: wrap;
+        max-width: 600px;
+        align-items: flex-start;
+
+		img {
+			cursor: pointer;
+			display: block;
+            width: 100px;
+            height: auto;
+
+			&:first-child {
+				cursor: auto;
+				width: 100%;
+			}
+		}
+    }
+    
+    form {
+        text-align: left;
+
+        .prdd_start_date, .show_time_slot {
+            width: 100%;
+        }
+
+        .prdd-delivery-form {
+            border: none;
+            padding: 0;
+            width: 300px;
+
+            input.delivery_calender {
+                cursor: pointer !important;
+                padding: 5px;
+
+                & + img {
+                    display: none;
+                }
+            }
+
+            .prdd_start_date, .show_time_slot {
+                width: 100%;
+            }
+
+            .ui-datepicker-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 10px;
+
+                &:before, &:after {
+                    content: normal;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    float: none;
+                    
+                    &.ui-datepicker-next {
+                        order: 1;
+                    }
+                }
+            }
+
+            .ui-datepicker-calendar {
+                a {
+                    &.ui-state-active, &:hover, &:focus {
+                        background: $secondary;
+                    }
+
+                    &:hover, &:focus {
+                        background: #fff;
+                        border: 2px solid $secondary;
+                        padding: 3px 8px;
+                    }
+                }
+            }
+
+            .show_time_slot {
+                label {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+
+            select.time_slot {
+                border: 1px solid $primary_light_90;
+                color: $primary_light_90;
+                padding: 5px;
+
+                &:focus {
+                    border-color: $secondary_dark_75;
+                }
+            }
+        }
+    }
+
+    h2, h3 {
+        text-align: right;
+    }
+
+    .summary {
+		h2 {
+            display: inline-block;
+			font-size: 1.2em;
+		}
+	}
+}
+
+// @supports(grid-template-areas: '.') {
+// 	.product {
+// 		display: grid;
+// 		grid-template-areas: 'gallery' 'summary' 'form';
+
+// 		.gallery {
+// 			grid-area: gallery;
+// 		}
+
+// 		.summary {
+// 			grid-area: summary;
+// 		}
+
+// 		form {
+// 			grid-area: form;
+// 		}
+// 	}
+// }
+
+@media(min-width: 31rem) {
+	.product {
+		padding: 20px;
+	}
+}
+
+@media(min-width: 45em) {
+	.product {
+		.gallery {
+			float: right;
+			width: 48%;
+		}
+
+		img:not(:first-child) {
+			width: 50%;
+			max-width: 150px;
+		}
+	
+		.summary {
+			width: 50%;
+		}
+	}
+
+	// @supports(grid-template-areas: '.') {
+	// 	.product {
+	// 		display: grid;
+	// 		grid-template-columns: 1fr 1fr;
+	// 		grid-column-gap: 20px;
+	// 		grid-template-areas: 'summary gallery' 'form form';
+
+	// 		.gallery {
+	// 			float: none;
+	// 			margin-right: 0;
+	// 			width: 100%;
+	// 		}
+
+	// 		.description {
+	// 			width: 100%;
+	// 		}
+	// 	}
+	// }
+}
+
+@media (min-width: 60rem) {
+	@supports(grid-template-areas: '.') {
+		.product {
+			grid-template-columns: 1fr 600px;
+		}
+	}
+}

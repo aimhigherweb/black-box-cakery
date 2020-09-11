@@ -18,6 +18,10 @@
 
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
+    remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+
+
+
     //Slide options
     add_theme_support( 'wc-product-gallery-lightbox' );
 
@@ -36,8 +40,11 @@
     function add_text_after_excerpt_single_product( $post_excerpt ){
         $description = $post_excerpt;
 
+        $flavour_name = isset( $_POST['pa_flavours'] ) ? '<h2>' . sanitize_text_field( $_POST['pa_flavours'] ) . '</h2>'  : '';
+        $flavour_description = isset( $_POST['flavour_description'] ) ? '<p>' . sanitize_text_field( $_POST['flavour_description'] ) . '</p>'  : '';
+
         // Your custom text
-        $post_excerpt = '<div class="description main">' . $description . '</div><div class="description pa_flavours"></div><div class="description pa_themes"></div></div>';
+        $post_excerpt = '<div class="description main">' . $description . '</div><div class="description pa_flavours">' . $flavour_name . $flavour_description . '</div><div class="description pa_themes"></div></div>';
 
         return $post_excerpt;
     }
@@ -47,5 +54,32 @@
 
     function add_closing_div(){
         return '<div><!-- end of summary -->';
+    }
+
+    // Add custom image gallery
+    add_action( 'woocommerce_before_single_product_summary', 'custom_product_gallery', 5);
+
+    function custom_product_gallery(){
+        global $product;
+
+        $gallery = array();
+
+		if(!in_array($product->image_id, $gallery)) {
+			array_push($gallery, $product->image_id);
+		}
+
+		foreach($product->gallery_image_ids as $img) {
+			if(!in_array($img, $gallery)) {
+				array_push($gallery, $img);
+			}
+		}
+    
+        echo '<div class="gallery">';
+            
+        foreach($gallery as $img) {
+            echo '<img src="' . wp_get_attachment_image_src($img, 'cake_image')[0] . '" />';
+        }
+            
+        echo '</div>';
     }
 ?>
